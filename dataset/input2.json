@@ -1,0 +1,38 @@
+{
+	"name": "input2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "bikecsv.csv",
+				"folderPath": "input",
+				"container": "adffolderdemo"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Main",
+				"type": "String"
+			},
+			{
+				"name": "Attend",
+				"type": "String"
+			},
+			{
+				"name": "Salary",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
